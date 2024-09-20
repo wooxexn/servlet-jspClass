@@ -82,5 +82,10 @@ public class DBServlet1 extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
     }
+
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String user = "system";
+	String password = "pass";  
 }
 

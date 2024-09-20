@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
+//서블릿 ( controller)
+//jsp ( view)
+//Model ( 에이콘학생목록 - ArrayList<acorn> )
+
 @WebServlet("/acornList")
 public class MVC2맛보기학생조회 extends HttpServlet{
 
