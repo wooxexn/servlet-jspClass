@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function regReview(){
+	alert("dfdfkjdkfd");
+	
+	//사용자입력 리뷰내용가져오기
+	let content = document.querySelector("#review").value;
+	alert(content);
+	
+	let dataValue = { id: "1", content : content };  //
+	
+	console.log(dataValue);
+	
+	let dataValueJson = JSON.stringfy(dataValue);
+	console.log(dataValueJason)
+	
+	
+	
+	
+	//json 형식으로
+	//ajax 서버와 통신
+
+	$.ajax({
+		type:"post",
+		url:"/day10/reg2",
+		contentType:  "application/json",      // {"id":"1","content":"whgdf"}
+		data : dataValueJson,
+		success: function(data){
+			console.log(data);
+		},
+		error: function( err){
+			console.log(err);
+		}
+		
+	});
+	
+	
+
+}
+
+</script>
+</head>
+<body>
+
+<input type="text" id="review">
+<button onclick="regReview()">등록</button>
+</body>
+</html>
